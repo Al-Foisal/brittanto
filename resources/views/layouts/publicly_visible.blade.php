@@ -70,29 +70,15 @@
         @includeWhen($slide,'partials_PV._slide')
     <!--/ End Slider Area -->
 
-    @includeWhen($top_ads,'partials_PV._top_ads')
-
     <section class="full-content-box">
         <div class="container-fluid">
             <div class="full-content-items">
-                
-                <!--/ left Ads start -->
-                @includeWhen($left_ads,'partials_PV._left_ads')
-                <!--/ right Ads end -->
                 
                 <!--/ middle content start -->
                 @yield('foisal')
                 <!--/ middle content end -->
 
-                <!--/ right Ads start -->
-                @includeWhen($right_ads,'partials_PV._right_ads')
-                <!--/ right Ads end -->
-
             </div>
-
-            <!--/ bottom Ads start -->
-            @includeWhen($bottom_ads,'partials_PV._bottom_ads')
-            <!--/ right Ads end -->
 
                 <!-- Footer area -->
                 @includeWhen($footer,'partials_PV._footer')

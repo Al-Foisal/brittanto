@@ -216,7 +216,7 @@ window.onclick = function(event) {
 
 @else
 
-<table class="table table-bordered">
+<table class="table table-bordered table-sm">
     <tr>
         <th>name</th>
         <th>owner phone</th>
@@ -236,7 +236,7 @@ window.onclick = function(event) {
         <td>{{ $user->service }}</td>
         <td>{{ $user->type }}</td>
         <td>
-            <a href="#">
+            <a href="{{ route('admin.request',$user->FI) }}">
                 details
             </a>
         </td>

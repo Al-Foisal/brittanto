@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://brittanto.com/'),
+    'url' => env('APP_URL', 'http://brittanto.foisal/'),
 
     'asset_url' => env('ASSET_URL', null),
 

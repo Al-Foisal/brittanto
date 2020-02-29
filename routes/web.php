@@ -27,8 +27,9 @@ Route::group(['middleware' => 'auth'], function(){
 		//dashboard for all verified coaching 
 		Route::get('/dashboard', 'DashboardController@showDashboard')->name('dashboard');
 
+		//admin area
 		Route::group(['middleware' => 'admin' , 'namespace'=>'Admin'], function(){
-			Route::get('/student/{FI}', 'AdminController@requestStudent')->name('admin.request.student');
+			Route::get('/admin/{FI}', 'AdminController@adminRequest')->name('admin.request');
 		});
 
 		Route::group(['middleware'=>'coaching'],function(){

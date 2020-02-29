@@ -31,11 +31,6 @@ class CoachingForntController extends Controller
         $data['slide'] = false;
         $data['footer'] = false;
 
-        $data['top_ads'] = true;
-        $data['left_ads'] = true;
-        $data['right_ads'] = true;
-        $data['bottom_ads'] = true;
-
         $data['users'] = User::orderBy('name')->where('active',0)->get()->groupBy(function($item) {
             return $item->type;
         });
@@ -51,13 +46,7 @@ class CoachingForntController extends Controller
         $data['header_inner'] = true;
         $data['header_menu'] = true;
         $data['slide'] = true;
-        $data['footer'] = true;
-
-        $data['top_ads'] = true;
-        $data['left_ads'] = true;
-        $data['right_ads'] = true;
-        $data['bottom_ads'] = true;
-        
+        $data['footer'] = true;        
 
         $data['solutions'] = CoachingForntEducationalSolution::where('inst_identity',$serial)->orderBy('id','asc')->limit(3)->get();
 
@@ -108,11 +97,6 @@ class CoachingForntController extends Controller
         $data['header_menu'] = false;
         $data['slide'] = false;
         $data['footer'] = true;
-
-        $data['top_ads'] = true;
-        $data['left_ads'] = false;
-        $data['right_ads'] = false;
-        $data['bottom_ads'] = true;
         
 
         $data['course'] = $course = CoachingForntPopularCourse::findBySlugOrFail($id);
@@ -130,11 +114,6 @@ class CoachingForntController extends Controller
         $data['header_menu'] = false;
         $data['slide'] = false;
         $data['footer'] = true;
-
-        $data['top_ads'] = true;
-        $data['left_ads'] = false;
-        $data['right_ads'] = false;
-        $data['bottom_ads'] = true;
         
 
         $data['event'] = $event = CoachingForntUpcomingEvent::findBySlugOrFail($id);
