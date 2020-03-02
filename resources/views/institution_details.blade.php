@@ -30,8 +30,6 @@
 @endif
 <!-- submission flash message ends -->
 
-
-	<div class="middle-content-box">
 		<!-- Features -->
 
 @if(count($solutions) !== 0)
@@ -524,6 +522,5 @@
 @endif
 		<!--/ End Blogs -->
 
-	</div>
 
 @stop

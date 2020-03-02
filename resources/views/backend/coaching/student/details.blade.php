@@ -129,10 +129,8 @@
                             <td>{{ $student->section}}</td>
                         </tr>
                         <tr>
-                            <th>email:</th>
-                            <td>{{ $student->email }}</td>
                             <th>admission date:</th>
-                            <td>{{ $student->created_at }}</td>
+                            <td>{{ date('m/d/Y || h:i:s a', strtotime($student->created_at)) }}</td>
                         </tr>
                     </table>
                 </div>

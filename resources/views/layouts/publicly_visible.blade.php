@@ -51,7 +51,15 @@
     @yield('css')
 </head>
 <body>
-
+    <!-- Book Preloader -->
+    <div class="book_preload">
+        <div class="book">
+            <div class="book__page"></div>
+            <div class="book__page"></div>
+            <div class="book__page"></div>
+        </div>
+    </div>
+    <!--/ End Book Preloader -->
     <!-- Header -->
     <header class="header">
         <!-- Topbar -->
@@ -70,22 +78,18 @@
         @includeWhen($slide,'partials_PV._slide')
     <!--/ End Slider Area -->
 
-    <section class="full-content-box">
-        <div class="container-fluid">
-            <div class="full-content-items">
+    
                 
-                <!--/ middle content start -->
-                @yield('foisal')
-                <!--/ middle content end -->
+        <!--/ middle content start -->
+        @yield('foisal')
+        <!--/ middle content end -->
 
-            </div>
+    
 
-                <!-- Footer area -->
-                @includeWhen($footer,'partials_PV._footer')
-                <!--/ End footer area -->                
+        <!-- Footer area -->
+        @includeWhen($footer,'partials_PV._footer')
+        <!--/ End footer area -->                
 
-        </div>
-    </section>
 <!-- Jquery JS-->
 
 @php

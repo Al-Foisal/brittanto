@@ -6,15 +6,15 @@
                     <div class="navbar-collapse">
                         <!-- Main Menu -->
                         <ul id="nav" class="nav menu navbar-nav">
-                            <li class="active"><a href="{{-- {{ route('institution.details') }} --}}">Home</a></li>
+                            <li class="active"><a href="#">Home</a></li>
                         @if(count($courses) !== 0)
-                            <li><a href="#courses">Courses</i></a></li>
+                            <li><a href="#courses">Courses</a></li>
                         @endif
                         @if(count($teachers) !== 0)
-                            <li><a href="#teachers">teachers</i></a></li>
+                            <li><a href="#teachers">teachers</a></li>
                         @endif
                         @if(count($events) !== 0)
-                            <li><a href="#events">Events</i></a></li>
+                            <li><a href="#events">Events</a></li>
                         @endif
                         @if(count($notices) !== 0)
                             <li><a href="#news">Latest news</a></li>

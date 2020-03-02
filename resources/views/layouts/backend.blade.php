@@ -60,6 +60,7 @@
     @yield('css')
 </head>
 <body>
+
     <div class="container-scroller">
         <!-- partial:partials/_navbar.html -->
         @include('backend.partials._navbar')
@@ -99,6 +100,7 @@
     <script src="{{ URL::asset('js/dashboard/dashboard.js') }}"></script>
     <script src="{{ URL::asset('js/print.js') }}"></script>
     <!-- End custom js for this page-->
+    
     @yield('js')
 </body>
 </html>

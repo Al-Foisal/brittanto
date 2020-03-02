@@ -33,7 +33,7 @@
 @section('foisal')
 
 
-<div class="row">
+<div class="row" style="margin-bottom: -20%;">
 	
 	<div class="col-md-12 grid-margin">
 		<div class="d-flex justify-content-between align-items-center">
@@ -152,7 +152,7 @@
                                 <td>{{ $exam->section }}</td>
                                 <td>{{ $exam->subject }}</td>
                                 <td>{{ $exam->mark }}</td>
-                                <td>{{ $exam->created_at }}</td>
+                                <td>{{ date('m/d/Y || h:i:s a', strtotime($exam->created_at)) }}</td>
                                 <td>
                                     <div class="btn-group" role="group">
                                         <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

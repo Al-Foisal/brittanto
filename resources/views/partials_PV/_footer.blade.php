@@ -41,15 +41,19 @@ $latest_notice = \App\Models\Coaching\Fornt\CoachingForntNoticeBoard::
 							<ul>
 
 								<li class="active"><a href="#"><i class="fa fa-angle-right"></i>Home</a></li>
+
 								@if(isset($courses))
 								<li><a href="#courses"><i class="fa fa-angle-right"></i>Courses</i></a></li>
 								@endif
+
 								@if(isset($teachers))
 								<li><a href="#teachers"><i class="fa fa-angle-right"></i>teachers</i></a></li>
 								@endif
+
 								@if(isset($events))
 								<li><a href="#events"><i class="fa fa-angle-right"></i>Events</i></a></li>
 								@endif
+
 								@if(isset($notices))
 								<li><a href="#news"><i class="fa fa-angle-right"></i>Latest news</a></li>
 								@endif
@@ -121,7 +125,7 @@ $latest_notice = \App\Models\Coaching\Fornt\CoachingForntNoticeBoard::
 						<div class="bottom-head">
 							<div class="row">
 								<div class="col-12">
-									<!-- Social -->
+									<!-- Social 
 									<ul class="social">
 										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -129,10 +133,10 @@ $latest_notice = \App\Models\Coaching\Fornt\CoachingForntNoticeBoard::
 										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 										<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 									</ul>
-									<!-- End Social -->
+									 End Social -->
 									<!-- Copyright -->
 									<div class="copyright">
-										<p>© Copyright {{ date("Y") }} <a href="http://brittanto.com" target="_blank">Brittanto</a>. All Rights Reserved</p>
+										<p>© Copyright {{ date("Y") }} <a href="http://brittanto.com" target="_blank">, Brittanto</a>.</p>
 									</div>
 									<!--/ End Copyright -->
 								</div>
