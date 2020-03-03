@@ -40,22 +40,22 @@ $latest_notice = \App\Models\Coaching\Fornt\CoachingForntNoticeBoard::
 							<h2>Useful Links</h2>
 							<ul>
 
-								<li class="active"><a href="#"><i class="fa fa-angle-right"></i>Home</a></li>
+								<li class="active"><a href="{{ route('institution.details',$user->FI) }}"><i class="fa fa-angle-right"></i>Home</a></li>
 
-								@if(isset($courses))
+								@if(!empty($courses))
 								<li><a href="#courses"><i class="fa fa-angle-right"></i>Courses</i></a></li>
 								@endif
 
-								@if(isset($teachers))
+								@if(!empty($teachers))
 								<li><a href="#teachers"><i class="fa fa-angle-right"></i>teachers</i></a></li>
 								@endif
 
-								@if(isset($events))
+								@if(!empty($events))
 								<li><a href="#events"><i class="fa fa-angle-right"></i>Events</i></a></li>
 								@endif
 
-								@if(isset($notices))
-								<li><a href="#news"><i class="fa fa-angle-right"></i>Latest news</a></li>
+								@if(!empty($notices))
+								<li><a href="#news"><i class="fa fa-angle-right"></i>Notice Board</a></li>
 								@endif
 
 							</ul>
@@ -68,6 +68,7 @@ $latest_notice = \App\Models\Coaching\Fornt\CoachingForntNoticeBoard::
 							<h2>Latest Posts</h2>
 							<div class="news-inner">
 								<div class="single-news">
+									@if(!empty($latest_course))
 									<img src="{{ URL::asset('images/latest_news.jpg') }}" alt="LS">
 									<h4>
 										<a href="{{ route('institution.single_course',$latest_course) }}" title="{{ $latest_course->course_title }}">
@@ -75,9 +76,11 @@ $latest_notice = \App\Models\Coaching\Fornt\CoachingForntNoticeBoard::
 										</a>
 									</h4>
 									<p>{{ substr($latest_course->course_description,0,65) }} ...</p>
+									@endif
 								</div>
 
 								<div class="single-news">
+									@if(!empty($latest_event))
 									<img src="{{ URL::asset('images/latest_news.jpg') }}" alt="LS">
 									<h4>
 										<a href="{{ route('institution.single_event',$latest_event) }}" title="{{ $latest_event->event_title }}">
@@ -85,15 +88,18 @@ $latest_notice = \App\Models\Coaching\Fornt\CoachingForntNoticeBoard::
 										</a>
 									</h4>
 									<p>{{ substr($latest_event->event_description,0,65) }} ...</p>
+									@endif
 								</div>
 
 								<div class="single-news">
+									@if(!empty($latest_notice))
 									<img src="{{ URL::asset('images/latest_news.jpg') }}" alt="LS">
 									<h4>
 										<a href="{{ asset('storage/storage/'.$latest_notice->inst_identity.'/notice/'.$latest_notice->notice_content)}}" title="{{ $latest_notice->notice_title }}">
 											{{ substr($latest_notice->notice_title,0,80) }} ...
 										</a>
 									</h4>
+									@endif
 								</div>
 							</div>
 						</div>

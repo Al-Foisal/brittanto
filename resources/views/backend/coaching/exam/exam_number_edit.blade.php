@@ -85,7 +85,7 @@
                                     <td>
                                         <ol>
                                             <li>Exam Name: {{ $number->exam_title }}</li>
-                                            <li>Class: {{ $number->class }}</li>
+                                            <li>Class: {{ $number->class_type }}</li>
                                             <li>Section: {{ $number->section }}</li>
                                             <li>Subject: {{ $number->subject }}</li>
                                             <li>Total Marks: {{ $number->defined_mark }}</li>

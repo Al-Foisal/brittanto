@@ -54,6 +54,10 @@
 							<div class="single-course">
 								<div class="course-head">		
 									<img src="{{ asset('storage/storage/'.$event->inst_identity.'/event/'.$event->event_banar)}}" alt="{{ $event->event_title}}">
+<hr>
+									<h4 class="text-success">
+										Event starts: {{ $event->event_start }} and end at {{ $event->event_end }}
+									</h4>
 								</div>			
 							</div>
 							<!--/ End Single Course -->

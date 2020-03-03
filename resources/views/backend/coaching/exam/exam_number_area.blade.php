@@ -85,7 +85,7 @@
                                     <td>
                                         <ol>
                                             <li>Exam Name: {{ $exam->exam_title }}</li>
-                                            <li>Class: {{ $exam->class }}</li>
+                                            <li>Class: {{ $exam->class_type }}</li>
                                             <li>Section: {{ $exam->section }}</li>
                                             <li>Subject: {{ $exam->subject }}</li>
                                             <li>Total Marks: {{ $exam->mark }}</li>
@@ -113,7 +113,7 @@
                                         <input id="student_id" name="student_id[]" required="required" type="number" value="{{ $student->std_id }}" readonly />
                                     </td>  
                                     <td>
-                                        <input id="mark" name="mark[]" required="required" value="0" type="number"/>
+                                        <input id="mark" name="mark[]" required="required" type="number"/>
                                     </td>  
                                 </tr> 
                                 <input type="hidden" name="test_id[]" value="{{ $exam->id }}"> 

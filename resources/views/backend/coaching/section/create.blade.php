@@ -86,7 +86,7 @@
 							<div style="width: 45%;float: left;margin-right: 5%;">
 								<p>
 									<label for="class"> Section for Class (select one): </label>
-									<select id="class" type="text" name="class">
+									<select id="class" type="text" name="class" required>
 										<option value="" selected>--select option--</option>
 										
 										<option value="20">Play Group</option>

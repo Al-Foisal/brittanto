@@ -42,7 +42,7 @@ class ExamNumberCalculation extends Controller
 
         foreach ($request->input('student_name') as $key => $name) {
             if($request->mark[$key] > $exam->mark){
-                session()->flash('message','Invalid mark for serial '.++$key);
+                session()->flash('message','Invalid mark '.$request->mark[$key].' out of '.$exam->mark.' for serial '.++$key);
                 return back();
             }
         }

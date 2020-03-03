@@ -32,7 +32,12 @@ class SectionOperationController extends Controller
         $fixed_identity = auth()->user()->FI;
         $data = [];
         $next_section = CoachingSection::select(['id','name'])->where('inst_identity',$fixed_identity)->orderBy('id','desc')->first();
-        $data['focus'] = substr($next_section->name,4)+1;
+
+        if($next_section)
+            $data['focus'] = substr($next_section->name,4)+1;
+        else
+            $data['focus'] = 1;
+
         return view('backend.coaching.section.create',$data);
     }
 

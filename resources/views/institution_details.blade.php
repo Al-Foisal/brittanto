@@ -301,9 +301,12 @@
 					<div class="col-lg-3 col-md-6 col-6">
 						<!-- Single Team -->
 						<div class="single-team teacher-one">
-
-							{{-- <img src="{{ asset('storage/storage/'.$teacher->inst_identity.'/employee/'.$teacher->image)}}" alt="{{ $teacher->name}}"> --}}
-							<img src="{{ URL::asset('pv/images/foisal.jpg') }}" alt="#">
+						@if(is_null($teacher->image))
+							<img src="{{ URL::asset('images/empty_profile.png') }}" style="height: 262px;width: 262px;">
+						@else
+							<img src="{{ asset('storage/storage/'.$teacher->inst_identity.'/employee/'.$teacher->image)}}" alt="{{ $teacher->name}}"style="height: 262px;width: 262px;">
+						@endif
+							{{-- <img src="{{ URL::asset('pv/images/foisal.jpg') }}" alt="#"> --}}
 
 							<div class="team-hover">
 								<h4>{{ $teacher->name }}<span>Education: {{ $teacher->study }}</span></h4>

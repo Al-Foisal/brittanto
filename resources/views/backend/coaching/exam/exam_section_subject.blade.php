@@ -80,8 +80,11 @@
 										<select required id="class" class="dynamic" data-dependent="section" type="text" name="class">
 											<option value="" selected>--select option--</option>
 
-											@for( $j=1; $j<=12; $j++)
-											<option value="{{ $j }}">{{ 'Class - '.$j }}</option>
+											<option value="20">Play Group</option>
+											<option value="21">Nursery</option>
+
+											@for( $i=1; $i<=12; $i++)
+											<option value="{{ $i }}">{{ 'Class - '.$i }}</option>
 											@endfor
 										</select>
 									</td>  
@@ -148,7 +151,7 @@
                             @foreach($examination as $exam)
                             <tr>
                                 <td>{{ $exam->exam_title }}</td>
-                                <td>{{ $exam->class }}</td>
+                                <td>{{ $exam->class_type }}</td>
                                 <td>{{ $exam->section }}</td>
                                 <td>{{ $exam->subject }}</td>
                                 <td>{{ $exam->mark }}</td>

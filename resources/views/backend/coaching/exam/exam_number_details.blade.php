@@ -41,7 +41,7 @@
             <div class="card-body" >
 
                 <p class="card-title mb-0">
-                    {{ $exam->exam_title }} | {{$exam->subject}} | {{ $exam->class }} | {{ $exam->section }}
+                    {{ $exam->exam_title }} | {{$exam->subject}} | {{ $exam->class_type }} | {{ $exam->section }}
                     <b>  (Number Details)</b>
                 </p> <hr>
                 <div class="table-responsive">

@@ -55,6 +55,10 @@
 								<div class="course-head">		
 									<img src="{{ asset('storage/storage/'.$course->inst_identity.'/course/'.$course->course_banar)}}" alt="{{ $course->course_title}}">
 								</div>			
+							<hr>
+							<h4 class="text-success text-center" style="padding-bottom: 10px;">
+								Course Label: {{ $course->course_label }} || Seats: {{ $course->total_seat }} <br> Duration: {{ $course->course_duration }} || Corse Fee: {{ $course->course_fee }}/=
+							</h4>
 							</div>
 							<!--/ End Single Course -->
 						</div>	

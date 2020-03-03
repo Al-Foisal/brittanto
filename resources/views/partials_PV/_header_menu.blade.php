@@ -6,7 +6,7 @@
                     <div class="navbar-collapse">
                         <!-- Main Menu -->
                         <ul id="nav" class="nav menu navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
+                            <li class="active"><a href="{{ route('institution.details',$user->FI) }}">Home</a></li>
                         @if(count($courses) !== 0)
                             <li><a href="#courses">Courses</a></li>
                         @endif

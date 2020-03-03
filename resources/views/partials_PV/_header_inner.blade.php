@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-3 col-12">
                 <div class="logo">
-                    <a href="#"><img src="{{ URL::asset('pv/images/logo.png') }}" alt="#"></a>
+                    <a href="https://brittanto.com/"><img src="{{ URL::asset('pv/images/logo.png') }}" alt="#"></a>
                 </div>
                 <div class="mobile-menu"></div>
             </div>
