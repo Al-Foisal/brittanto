@@ -2,25 +2,39 @@
 
 @section('title') List of institutions @stop
 
+@section('css')
+
+<style>
+.middle-content-box{
+	    padding: 25px;
+    background: azure;
+}
+.bg-head{
+	color: white;
+    background: black;
+    border-radius: 5px;
+    }
+</style>
+
+@stop
+
 @section('foisal')
 
 	<div class="middle-content-box">
 		
 
 	@foreach ($users as $type => $users_list)
-		<table style="width: 30%;margin-right: 3%;float: left;border: 1px solid;">
+		<table class="table table-hover table-sm" style="width: 30%;float: left;margin-right: 3%;">
 			
 		@if($type !== 'admin')
 			<tr>
-				<th
-				style="background-color: #F7F7F7">{{ ucwords($type) }}: {{ $users_list->count() }} </th>
-				<th 
-				style="background-color: #F7F7F7">Area</th>
+				<th class="bg-head">{{ ucwords($type) }}: {{ $users_list->count() }} </th>
+				<th class="bg-head">Area</th>
 			</tr>
 
 			@if($type === 'coaching')
 				@foreach ($users_list as $user)
-				<tr style="border: 1px solid;">
+				<tr class="table-active">
 					<td>
 						<a href="{{ route('institution.details',$user->FI) }}">{{ $user->name }}
 						</a>
@@ -33,7 +47,7 @@
 				@endforeach
 			@elseif($type === 'kindergarten')
 				@foreach ($users_list as $user)
-				<tr style="border: 1px solid;">
+				<tr class="table-active">
 					<td>
 						<a href="{{ route('institution.details',$user->FI) }}">{{ $user->name }}
 						</a>
@@ -46,7 +60,7 @@
 				@endforeach
 			@else
 				@foreach ($users_list as $user)
-				<tr style="border: 1px solid;">
+				<tr class="table-active">
 					<td>
 						<a href="{{ route('institution.details',$user->FI) }}">{{ $user->name }}
 						</a>

@@ -20,7 +20,7 @@
                     </div>
                     <div class="single-widget">
                         <i class="fa fa-map-marker"></i>
-                        <h4>Our Location<span>{{ $user->address }}</span></h4>
+                        <h4>Location<span>{{ $user->address }}</span></h4>
                     </div>
                 </div>
                 <!--/ End Header Widget -->

@@ -39,7 +39,6 @@
 					<div class="col-12">
 						<div class="section-title">
 							<h2>We Provide <span>Educational</span> Solutions</h2>
-
 						</div>
 					</div>
 				</div>
@@ -54,7 +53,7 @@
 								<img src="{{ URL::asset('images/solution.jpg') }}" alt="#">
 							</div>
 							<h2>{{ $solution->solution_title }}</h2>
-							<p>{{ $solution->description }}</p>	
+							<p class="text-justify">{{ $solution->description }}</p>	
 						</div>
 						<!--/ End Single Feature -->
 					</div>
@@ -124,7 +123,9 @@
 								<div class="enroll-right">
 									<div class="section-title">
 										<h2>Ability to think about or plan the future with imagination or wisdom!</h2>
-										<p>{{ $mission->vision_description ?? '' }}</p>
+										<p class="text-justify">
+											{{ $mission->vision_description ?? '' }}
+										</p>
 									</div>
 								</div>
 								<!-- Skill Main -->
@@ -134,9 +135,11 @@
 											<!-- Single Skill -->
 											<div class="single-skill">
 												<div class="circle" data-value="0.7" data-size="130">
-													<strong>{{ $count->student_count ?? '' }}+</strong>
+													<strong>
+														{{ count($students) }}+
+													</strong>
 												</div>
-												<h4>Students</h4>
+												<h4>Active Students</h4>
 											</div>
 											<!--/ End Single Skill -->
 										</div>
@@ -144,9 +147,11 @@
 											<!-- Single Skill -->
 											<div class="single-skill">
 												<div class="circle" data-value="0.9" data-size="130">
-													<strong>{{ $count->course_count ?? '' }}+</strong>
+													<strong>
+														{{ count($teachers) }}+
+													</strong>
 												</div>
-												<h4>Courses</h4>
+												<h4>Active Teachers</h4>
 											</div>
 											<!--/ End Single Skill -->
 										</div>
@@ -154,9 +159,11 @@
 											<!-- Single Skill -->
 											<div class="single-skill">
 												<div class="circle" data-value="0.8" data-size="130">
-													<strong>{{ $count->event_count ?? '' }}+</strong>
+													<strong>
+														{{ count($courses) }}+
+													</strong>
 												</div>
-												<h4>Events</h4>
+												<h4>Active Courses</h4>
 											</div>
 											<!--/ End Single Skill -->
 										</div>
@@ -218,7 +225,9 @@
 										</a>
 									</h4>
 
-									<p>{{ substr($course->course_description,0,141) }} </p>
+									<p class="text-justify">
+										{{ substr($course->course_description,0,141) }}
+									</p>
 
 								</div>
 								<div class="course-meta">
@@ -256,9 +265,13 @@
 						<div class="cta-inner overlay">
 							<div class="text-content">
 								<h2>Deeds that we believe it is our duty to do</h2>
-								<p>{{ $mission->mission_description ?? '' }}</p>
+								<p class="text-justify">
+									{{ $mission->mission_description ?? '' }}
+								</p>
 								<div class="button">
-									<a class="btn primary" href="#enroll" >Register Now</a>
+									<a class="btn primary" href="#enroll" >
+										Register Now
+									</a>
 								</div>
 							</div>
 						</div>
@@ -336,9 +349,9 @@
 
 								<div class="main-content">
 									<h4 class="name">{{ $owner->name }}
-										<p>{{ 'Phone: '.$owner->position }}</p>
+										<p>{{ $owner->position }}</p>
 									</h4>
-									<p> {{ $owner->message }} </p>
+									<p class="text-justify"> {{ $owner->message }} </p>
 								</div>
 							</div>
 
@@ -405,7 +418,7 @@
 										</a>
 									</h4>
 
-									<p>{{ substr($event->event_description,0,91) }}</p>
+									<p class="text-justify">{{ substr($event->event_description,0,91) }}</p>
 
 									<div class="button">
 										<a href="#enroll" class="btn">Join Event</a>
@@ -435,8 +448,10 @@
 						<!-- Single Fact -->
 						<div class="single-fact">
 							<i class="fa fa-institution"></i>
-							<div class="number"><span class="counter">{{ count($courses) }}</span>+</div>
-							<p>Active Cources</p>
+							<div class="number"><span class="counter">
+								{{ $count->course_count }}
+							</span>+</div>
+							<p>Performed Cources</p>
 						</div>
 						<!--/ End Single Fact -->
 					</div>
@@ -444,8 +459,10 @@
 						<!-- Single Fact -->
 						<div class="single-fact">
 							<i class="fa fa-graduation-cap"></i>
-							<div class="number"><span class="counter">{{ count($students) }}</span>+</div>
-							<p>Active Students</p>
+							<div class="number"><span class="counter">
+								{{ $count->student_count }}
+							</span>+</div>
+							<p>Trained Students</p>
 						</div>
 						<!--/ End Single Fact -->
 					</div>
@@ -453,8 +470,10 @@
 						<!-- Single Fact -->
 						<div class="single-fact">
 							<i class="fa fa-video-camera"></i>
-							<div class="number"><span class="counter">{{ count($teachers) }}</span>+</div>
-							<p>Active Teacher</p>
+							<div class="number"><span class="counter">
+								{{ $count->teacher_count }}
+							</span>+</div>
+							<p>Served Teacher</p>
 						</div>
 						<!--/ End Single Fact -->
 					</div>
@@ -462,8 +481,10 @@
 						<!-- Single Fact -->
 						<div class="single-fact">
 							<i class="fa fa-trophy"></i>
-							<div class="number"><span class="counter">{{ $count->teacher_count ?? '' }}</span>+</div>
-							<p>Trainers</p>
+							<div class="number"><span class="counter">
+								{{ $count->event_count ?? '' }}
+							</span>+</div>
+							<p>Performed Event</p>
 						</div>
 						<!--/ End Single Fact -->
 					</div>
@@ -480,7 +501,7 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="section-title">
-							<h2>Latest <span>News</span></h2>
+							<h2>Notice <span>Board</span></h2>
 							
 						</div>
 					</div>
@@ -503,7 +524,7 @@
 								</div>
 
 								<div class="blog-content">
-									<h4 class="blog-title">
+									<h4 class="blog-title text-center">
 										<a href="{{ asset('storage/storage/'.$notice->inst_identity.'/notice/'.$notice->notice_content)}}" target="_blank">{{ $notice->notice_title }}</a>
 									</h4>
 								</div>

@@ -4,6 +4,7 @@
             <div class="col-lg-8 col-12">
                 <!-- Contact -->
                 <ul class="content">
+                    <li><b>Head Controller: </b></li>
                     <li><i class="fa fa-phone"></i>+8801798032828</li>
                     <li><i class="fa fa-envelope-o"></i>info@brittanto.com</li>
                 </ul>

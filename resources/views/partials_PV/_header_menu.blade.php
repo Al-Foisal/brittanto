@@ -11,13 +11,13 @@
                             <li><a href="#courses">Courses</a></li>
                         @endif
                         @if(count($teachers) !== 0)
-                            <li><a href="#teachers">teachers</a></li>
+                            <li><a href="#teachers">Teachers</a></li>
                         @endif
                         @if(count($events) !== 0)
                             <li><a href="#events">Events</a></li>
                         @endif
                         @if(count($notices) !== 0)
-                            <li><a href="#news">Latest news</a></li>
+                            <li><a href="#news">Notice Board</a></li>
                         @endif
                         </ul>
                         <!-- End Main Menu -->
