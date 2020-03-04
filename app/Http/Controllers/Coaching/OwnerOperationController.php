@@ -122,18 +122,27 @@ class OwnerOperationController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $fixed_identity = auth()->user()->FI;
+        
         $valid = Validator::make($request->all(),[
             'name' => 'required',
             'position' => 'required',
             'phone' => 'required|regex:/(8801)[0-9]{9}/',
             'message' => 'required',
+            'image' => 'image|mimes:png,jpeg|max:50'
         ]);
         
         if ($valid->fails()) {
             return redirect()->back()->withErrors($valid)->withInput();
         }
 
-        $input = $request -> only(['name','position','phone','message']);
+        $input = $request -> only(['name','position','phone','message','image']);
+        if($request->hasFile('image')){
+            $image = $request->image;
+            $file_name = ($fixed_identity.time()).'.'.$image->extension();
+            $image->storeAs('public/storage/'.$fixed_identity.'/owner',$file_name);
+            $input['image'] = $file_name;
+        }
         $owner = CoachingOwner::findOrFail($id);
         $owner -> update($input);
 

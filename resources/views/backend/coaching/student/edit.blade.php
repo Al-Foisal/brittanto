@@ -65,14 +65,24 @@
 				<div id="wrapper">
 					<div class="animate form">
 
-						<form  action="{{ route('coaching-students.update',$student->id) }}" method="post">
+						<form  action="{{ route('coaching-students.update',$student->id) }}" method="post" enctype="multipart/form-data">
 							@method('PUT') 
 							@csrf
 							<h1>{{ auth()->user()->abbreviation . ' Student Data Correction'}}</h1> 
-							<p> 
-								<label for="name"> Student Name: </label>
-								<input id="name" name="name" value="{{ $student->name }}" required="required" type="text"/>
-							</p>
+
+							<div style="width: 45%;float: left;margin-right: 5%;">
+								<p> 
+									<label for="name"> Student Name: </label>
+									<input id="name" name="name" value="{{ $student->name }}" required="required" type="text"/>
+								</p>
+							</div>
+
+							<div style="width: 48%;float: left;">
+								<p> 
+									<label for="image"> Student Image (optional): </label>
+									<input id="image" name="image" value="{{ $student->image }}" type="file" />
+								</p>							
+							</div>	
 
 							<p> 
 								<label for="school_name"> Current School Name: </label>

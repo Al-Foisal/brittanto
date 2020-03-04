@@ -33,7 +33,7 @@
 @section('foisal')
 
 <button onclick="goBack()" class="btn btn-secondary" style="float: left;">
-    Back
+	Back
 </button>
 
 <div class="row">
@@ -67,7 +67,7 @@
 				<div id="wrapper">
 					<div class="animate form">
 
-						<form  action="{{ route('coaching-employees.update',$employee) }}" method="post"> 
+						<form  action="{{ route('coaching-employees.update',$employee) }}" method="post" enctype="multipart/form-data"> 
 							@method('PUT')
 							@csrf
 							<h1>{{ auth()->user()->abbreviation . ' Employee Data Correction'}}</h1> 
@@ -90,13 +90,23 @@
 								</p> 
 							</div>
 
-							<p>
-								<label for="commitment"> Salary Commitment (select one): </label>
-								<select id="commitment" type="text" name="commitment" required>
-									<option value="per_class">Per Class Payment</option>
-									<option value="fixed">Fixed Payment</option>
-								</select> 
-							</p>							
+							<div style="width: 45%;float: left;margin-right: 5%;">
+								<p>
+									<label for="commitment"> Salary Commitment (select one): </label>
+									<select id="commitment" type="text" name="commitment" required>
+										<option value="{{$employee->commitment}}" selected>{{$employee->commit_type}} payment</option>
+										<option value="per_class">Per Class Payment</option>
+										<option value="fixed">Fixed Payment</option>
+									</select> 
+								</p>	
+							</div>	
+
+							<div style="width: 48%;float: left;">
+								<p> 
+									<label for="image"> Employee Image (optional): </label>
+									<input id="image" name="image" value="{{ $employee->image }}" type="file" />
+								</p>							
+							</div>					
 
 							<p class="login button"> 
 								<input type="submit" onclick="return confirm('Are you sure you want to submit this item?');" value="Add Correction" /> 
@@ -117,8 +127,8 @@
 @section('js')
 
 <script>
-    function goBack() {
-      window.history.back();
-  }
+	function goBack() {
+		window.history.back();
+	}
 </script>
 @stop

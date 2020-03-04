@@ -180,6 +180,7 @@ class StudentOperationController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $fixed_identity = auth()->user()->FI;
         $valid = Validator::make($request->all(),[
             'name' => 'required',
             'amd_type' => 'required',
@@ -187,13 +188,21 @@ class StudentOperationController extends Controller
             'tution_fee' => 'required|digits_between:1,19',
             'amd_class' => 'required',
             'section' => 'required',
+            'image' => 'image|mimes:png,jpeg|max:50'
         ]);
 
         if ($valid->fails()) {
             return redirect()->back()->withErrors($valid)->withInput();
         }
 
-        $input = $request -> only(['name','school_name','amd_type','grd_phone','std_phone','tution_fee','amd_class','section']);
+        $input = $request -> only(['name','school_name','amd_type','grd_phone','std_phone','tution_fee','amd_class','section','image']);
+
+        if($request->hasFile('image')){
+            $image = $request->image;
+            $file_name = ($fixed_identity.time()).'.'.$image->extension();
+            $image->storeAs('public/storage/'.$fixed_identity.'/student',$file_name);
+            $input['image'] = $file_name;
+        }
 
         $student = CoachingStudent::findOrFail($id);
         

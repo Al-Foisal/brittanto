@@ -33,7 +33,7 @@
 @section('foisal')
 
 <button onclick="goBack()" class="btn btn-secondary" style="float: left;">
-    Back
+	Back
 </button>
 
 <div class="row">
@@ -67,14 +67,24 @@
 				<div id="wrapper">
 					<div class="animate form">
 
-						<form  action="{{ route('coaching-owners.update',$owner->id) }}" method="post">
+						<form  action="{{ route('coaching-owners.update',$owner->id) }}" method="post" enctype="multipart/form-data">
 							@method('PUT') 
 							@csrf
 							<h1>{{ auth()->user()->abbreviation . ' Owner Data Correction'}}</h1> 
-							<p> 
-								<label for="name"> Owner Name: </label>
-								<input id="name" name="name" value="{{ $owner->name}}" required="required" type="text"/>
-							</p>							
+
+							<div style="width: 45%;float: left;margin-right: 5%;">
+								<p> 
+									<label for="name"> Owner Name: </label>
+									<input id="name" name="name" value="{{ $owner->name}}" required="required" type="text"/>
+								</p>
+							</div>	
+
+							<div style="width: 48%;float: left;">
+								<p> 
+									<label for="image"> Owner Image (optional): </label>
+									<input id="image" name="image" value="{{ $owner->image }}" type="file" />
+								</p>							
+							</div>						
 
 							<div style="width: 45%;float: left;margin-right: 5%;">
 								<p> 
@@ -115,8 +125,8 @@
 @section('js')
 
 <script>
-    function goBack() {
-      window.history.back();
-  }
+	function goBack() {
+		window.history.back();
+	}
 </script>
 @stop

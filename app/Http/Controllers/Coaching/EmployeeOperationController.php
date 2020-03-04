@@ -151,17 +151,27 @@ class EmployeeOperationController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //dd($request->all());
+        $fixed_identity = auth()->user()->FI;
         $valid = Validator::make($request->all(),[
             'name' => 'required',
             'salary' => 'required|digits_between:1,10',
             'commitment' => 'required',
             'phone' => 'required|regex:/(8801)[0-9]{9}/',
+            'image' => 'image|mimes:png,jpeg|max:50',
         ]);
 
         if ($valid->fails()) {
             return redirect()->back()->withErrors($valid)->withInput();
         }   
-        $input = $request -> only(['name','phone','salary','commitment']);
+        $input = $request -> only(['name','phone','salary','commitment','image']);
+
+        if($request->hasFile('image')){
+            $image = $request->image;
+            $file_name = ($fixed_identity.time()).'.'.$image->extension();
+            $image->storeAs('public/storage/'.$fixed_identity.'/employee',$file_name);
+            $input['image'] = $file_name;
+        }
         $employee = CoachingEmployee::findBySlugOrFail($id);
         
         $employee -> update($input);

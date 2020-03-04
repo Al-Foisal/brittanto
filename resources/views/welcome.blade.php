@@ -6,14 +6,27 @@
 
 <style>
 .middle-content-box{
-	    padding: 25px;
+	    padding: 10px 0 10px 20px;
     background: azure;
 }
 .bg-head{
 	color: white;
-    background: black;
+    background: darkgrey;
     border-radius: 5px;
     }
+.table-view {
+    width: 31%;
+    float: left;
+    margin-right: 2%;
+  }
+
+
+@media only screen and (max-width: 720px)  {
+	.middle-content-box .table-view {
+    width: 98%;
+    margin: auto;
+  }
+}
 </style>
 
 @stop
@@ -24,7 +37,7 @@
 		
 
 	@foreach ($users as $type => $users_list)
-		<table class="table table-hover table-sm" style="width: 30%;float: left;margin-right: 3%;">
+		<table class="table-view table table-hover table-sm " style="margin-bottom: 10px;">
 			
 		@if($type !== 'admin')
 			<tr>
