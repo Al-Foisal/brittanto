@@ -56,15 +56,7 @@
 
 @stop
 @section('foisal')
-@php 
-    
-    //taking student id for detailed pdf
-    $student_pdf = [
-        'std_id' => $student->std_id,
-    ];
-    $student_pdf = Crypt::encrypt($student_pdf);
 
-@endphp
 
 <div class="row">
     <div class="col-md-12 grid-margin stretch-card">
@@ -79,7 +71,7 @@
 
                     <b class="card-title-resize">Student Details</b>
                     
-                    <a href="{{ route('pdf.student.details',$student_pdf) }}" target="_blank" class="btn btn-secondary" style="float: right;" title="Covert this page into PDF">
+                    <a href="{{ route('pdf.student.details',$student->std_id) }}" target="_blank" class="btn btn-secondary" style="float: right;" title="Covert this page into PDF">
                         Download pdf
                     </a>
                 </p>

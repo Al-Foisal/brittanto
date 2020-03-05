@@ -15,8 +15,7 @@ class PdfGeneratorController extends Controller
     public function getStudentPdf($student)
     {
     	$fixed_identity = auth()->user()->FI;
-    	$get_data = Crypt::decrypt($student);
-    	$student_id = $get_data["std_id"];
+    	$student_id = $student;
 
     	$pdf = \App::make('dompdf.wrapper');
 
@@ -27,6 +26,9 @@ class PdfGeneratorController extends Controller
     				->where('inst_identity',$fixed_identity)
     				->get();
     	$output ='
+<h3 style="text-align:center;">'. auth()->user()->name .'</h3> 
+<p style="text-align:center;">'. auth()->user()->address .'</p>
+        <hr>
 <div class="row">
 <div class="col-md-12 grid-margin stretch-card">
 <div class="card">
@@ -35,51 +37,49 @@ class PdfGeneratorController extends Controller
 <div class="table-responsive">
     <table class="table table-hover table-bordered" style="border: 1px solid; padding:12px;width:100%;text-transform: capitalize;">
         <tr>
-            <th>full name:</th>
+            <th style="text-align:right;">full name:</th>
             <td>'.$student->name.'</td>
-            <th>school name:</th>
+            <th style="text-align:right;">school name:</th>
             <td>'.$student->school_name.'</td>
         </tr>
         <tr>
-            <th>student ID:</th>
+            <th style="text-align:right;">student ID:</th>
             <td>'. $student->std_id .'</td>
-            <th>class:</th>
+            <th style="text-align:right;">class:</th>
             <td>'. $student->amd_class .'</td>
         </tr>
         <tr>
-            <th>admitted as:</th>
+            <th style="text-align:right;">admitted as:</th>
             <td>'. $student->admission_type .'</td>
-            <th>class roll:</th>
+            <th style="text-align:right;">class roll:</th>
             <td>'. $student->class_roll .'</td>
         </tr>
         <tr>
-            <th>tution fee:</th>
+            <th style="text-align:right;">tution fee:</th>
             <td>'. $student->tution_fee .'</td>
-            <th>address:</th>
+            <th style="text-align:right;">address:</th>
             <td>'. $student->address .'</td>
         </tr>
         <tr>
-            <th>guardian name:</th>
+            <th style="text-align:right;">guardian name:</th>
             <td>'. $student->guardian_name .'</td>
-            <th>guardian phone:</th>
+            <th style="text-align:right;">guardian phone:</th>
             <td>'. $student->grd_phone .'</td>
         </tr>
         <tr>
-            <th>student phone:</th>
+            <th style="text-align:right;">student phone:</th>
             <td>'. $student->std_phone .'</td>
-            <th>commitment:</th>
+            <th style="text-align:right;">commitment:</th>
             <td>'. $student->commitment .'</td>
         </tr>
         <tr>
-            <th>reference:</th>
+            <th style="text-align:right;">reference:</th>
             <td>'. $student->reference .'</td>
-            <th>section:</th>
+            <th style="text-align:right;">section:</th>
             <td>'. $student->section.'</td>
         </tr>
         <tr>
-            <th>email:</th>
-            <td></td>
-            <th>admission date:</th>
+            <th style="text-align:right;">admission date:</th>
             <td>'. $student->created_at .'</td>
         </tr>
     </table>

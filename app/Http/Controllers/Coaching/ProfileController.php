@@ -26,7 +26,12 @@ class ProfileController extends Controller
     	$data = [];
     	// $id = CoachingStudent::select('id')->where('std_id',$request->input(['std_id']))->where('inst_identity',$fixed_identity)->first();
     	// dd($id);
-        $data['student'] = CoachingStudent::where('std_id',$request->input(['std_id']))->where('inst_identity',$fixed_identity)->first();
+        $data['student'] = $student = CoachingStudent::where('std_id',$request->input(['std_id']))->where('inst_identity',$fixed_identity)->first();
+
+        if(!$student){
+            session()->flash('message','Student not found bearing ID#'.$request->std_id);
+            return redirect()->route('coaching-students.index');
+        }
         $data['receipts'] = CoachingPaidReceipt::where('std_id',$request->input(['std_id']))
                             ->where('inst_identity',$fixed_identity)
                             ->get();

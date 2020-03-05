@@ -266,8 +266,13 @@ $f = new \NumberFormatter( locale_get_default(), \NumberFormatter::SPELLOUT );  
                                     <p>{{'In word: '.$words}}</p>
                                     <p>{{ 'Name: '.$students->name}}</p>
                                     <p>
-                                        ID# <b>{{$students->std_id}}</b>
-                                        , Class: {{$class.'('.$students->amd_class.')'}}
+                                        ID# <b>{{$students->std_id}}</b>, 
+                                        @if($students->amd_class==20||$students->amd_class==21)
+                                            Class: {{ $students->class_type }}
+                                        @else
+                                        Class: {{$class.'('.$students->amd_class.')'}}
+                                        @endif
+                                        
                                     </p>
                                     <p>
                                         Batch Name: <b>{{$students->section}}</b>
@@ -370,8 +375,13 @@ $f = new \NumberFormatter( locale_get_default(), \NumberFormatter::SPELLOUT );  
                                     <p>{{'In word: '.$words}}</p>
                                     <p>{{ 'Name: '.$students->name}}</p>
                                     <p>
-                                        ID# <b>{{$students->std_id}}</b>
-                                        , Class: {{$class.'('.$students->amd_class.')'}}
+                                        ID# <b>{{$students->std_id}}</b>, 
+                                        @if($students->amd_class==20||$students->amd_class==21)
+                                            Class: {{ $students->class_type }}
+                                        @else
+                                        Class: {{$class.'('.$students->amd_class.')'}}
+                                        @endif
+                                        
                                     </p>
                                     <p>
                                         Batch Name: <b>{{$students->section}}</b>

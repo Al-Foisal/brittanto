@@ -185,6 +185,47 @@
 		</div>
 	</div>
 
+	<hr>
+
+	<div class="card mb-3">
+		<div class="card-header">
+			<h3>User Pages</h3>
+		</div>
+		
+		<div class="card-body">
+
+			<h5 class="card-title">Fornt</h5>
+			<p class="card-text">
+				user pages option এর সকল content publicly show করবে।
+			</p>
+
+			<hr>
+
+			<h5 class="card-title">Edu. Solution</h5>
+			<p class="card-text">
+				educational solution এ মোট তিনটি কৌশল দেওয়া থাকবে যেটা লিখিতভাবে সংক্ষিপ্ত কিন্তু অর্থবহ হবে, যেটা শিক্ষার্থীদের পড়াশোনা, আদবকায়দা এবং আপনার প্রতিষ্ঠানের শিক্ষার সর্বোত্তম মান নিশ্চিত করবে।
+			</p>
+
+			<hr>
+
+			<h5 class="card-title">Course & Event</h5>
+			<p class="card-text">
+				courses option এ আপনার প্রতিষ্ঠানের একটি course এর বিস্তারিত বর্ণনা থাকবে। যেখানে অন্তর্ভুক্ত থাকবে একটি course title,course সম্পর্কিত একটি ব্যানার, course টি যাদের জন্য প্রযোয্য,আসন সংখ্যা,duration and fees with proper discription of   respective course. এক category button থেকে course special feature গুলো যুক্ত করতে হবে। উপরের নিয়ম অনুযায়ী নতুন course and features যুক্ত করতে হবে।
+
+				নতুন কোর্স তৈরীর ক্ষেত্রে যে নিয়ম প্রযোয্য event তৈরী ক্ষেত্রে একই নিয়ম প্রযোয্য।
+			</p>
+
+			<hr>
+
+			<h5 class="card-title">Notice Board</h5>
+			<p class="card-text">
+				notice board add করার জন্য একটি notice title and content add করতে হবে।content টি অবশ্যই pdf format এ হতে হবে।
+			</p>
+
+			<hr>
+		</div>
+	</div>
+
 </div>
 
 

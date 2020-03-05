@@ -42,6 +42,11 @@ class ProceedTokenController extends Controller
         //for student information
         $data['students'] = $students = CoachingStudent::where('std_id',$student_id)->where('inst_identity',$fixed_identity)->first();
 
+        if($students === null ){
+            session()->flash('message','Invalid ID or Less Information');
+            return redirect()->back();
+        }
+
         //for receipt details
         $data['receipt'] = CoachingProceed::where('inst_identity',$fixed_identity)->orderBy('id','desc')->first();
 
@@ -58,11 +63,6 @@ class ProceedTokenController extends Controller
         } else {
             $data['serial'] = $last_inserted_receipt_serial->receipt_serial + 1;
         }
-
-    	if($students === null ){
-    		session()->flash('message','Invalid ID or Less Information');
-    		return redirect()->back();
-    	}
 
     	return view('backend.coaching.proceed.receipt',$data);
     }
