@@ -1,8 +1,5 @@
 <footer class="text-muted">
 		<div class="container">
-			<p class="float-right">
-				<a href="#">Back to top</a>
-			</p>
-			<p>All  &copy; {{date('Y')}}</p>
+			<p>&copy;Copyright{{date('Y')}}, <a href="https://brittanto.com/">Brittanto</a></p>
 		</div>
 	</footer>

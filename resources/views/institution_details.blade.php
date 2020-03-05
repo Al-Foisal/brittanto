@@ -472,7 +472,7 @@
 					<div class="col-lg-3 col-md-6 col-6">
 						<!-- Single Fact -->
 						<div class="single-fact">
-							<i class="fa fa-video-camera"></i>
+							<i class="fa fa-users" aria-hidden="true"></i>
 							<div class="number"><span class="counter">
 								{{ $count->teacher_count }}
 							</span>+</div>

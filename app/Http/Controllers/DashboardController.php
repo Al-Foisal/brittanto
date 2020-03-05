@@ -14,12 +14,12 @@ class DashboardController extends Controller
 {
     public function showDashboard()
     {
-        /*if(auth()->user()->active == 0)
+        if(auth()->user()->active == 0)
         {
             auth()->logout();
             session()->flash('message','Your account is not activated');
             return redirect()->route('login');
-        }*/
+        }
 
     	$fixed_identity = auth()->user()->FI;
     	$data = [];

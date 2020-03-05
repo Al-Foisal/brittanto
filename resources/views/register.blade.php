@@ -1,6 +1,6 @@
 @extends('layouts.forntend')
 
-@section('title') {{ config('app.name') }} register form @stop
+@section('title') {{ config('app.name') }} registration form @stop
 
 @section('foisal')
 
@@ -50,13 +50,13 @@
 					<div style="width: 48%;float: left;">
 						<p> 
 							<label for="area"> Institution Area: </label>
-							<input id="area" value="{{old('area')}}" name="area" required="required" type="text" placeholder="Dhaka"/>
+							<input id="area" value="{{old('area')}}" name="area" required="required" type="text" placeholder="Rupnagar, Dhaka"/>
 						</p> 
 					</div>
 
 					<p> 
 						<label for="address"> Institution Address </label>
-						<textarea id="address" value="{{old('address')}}" name="address" required="required" rows="2" cols="60" placeholder="eg. X8df!90EO"></textarea>
+						<textarea id="address" value="{{old('address')}}" name="address" required="required" rows="2" cols="60" placeholder="Address"></textarea>
 					</p>
 
 					<p> 
@@ -71,20 +71,20 @@
 
 					<p> 
 						<label for="owner_name">Institution Owner Name </label>
-						<input id="owner_name" value="{{old('owner')}}" name="owner" required="required" type="text" placeholder="eg. X8df!90EO" /> 
+						<input id="owner_name" value="{{old('owner')}}" name="owner" required="required" type="text" placeholder="Md Hafiz Al Foisal" /> 
 					</p>
 
 					<div style="width: 45%;float: left;margin-right: 5%;">
 						<p> 
 							<label for="owner_phone"> Institution Owner Phone: </label>
-							<input id="owner_phone" value="{{old('owner_phone')}}" name="owner_phone" required="required" type="text" placeholder="123-123-132"/>
+							<input id="owner_phone" value="{{old('owner_phone')}}" name="owner_phone" required="required" type="text" placeholder="8801xxxxxxxxx"/>
 						</p> 
 					</div>
 
 					<div style="width: 48%;float: left;">
 						<p> 
 							<label for="inst_phone"> Institution Phone: </label>
-							<input id="inst_phone" value="{{old('indt_phone')}}" name="inst_phone" required="required" type="text" placeholder="123-123-132"/>
+							<input id="inst_phone" value="{{old('indt_phone')}}" name="inst_phone" required="required" type="text" placeholder="8801xxxxxxxxx"/>
 						</p> 
 					</div>
 
