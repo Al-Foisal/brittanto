@@ -137,7 +137,7 @@ class ExamNumberCalculation extends Controller
         $id = CoachingExamTitle::findBySlugOrFail($title_id);
         $data = [];
         $data['exam_title'] = $id->exam_title;
-        $data['lists'] = CoachingSubjectList::all();
+        $data['lists'] = CoachingSubjectList::orderBy('subject_name','asc')->get();
 
         return view('backend.coaching.exam.exam_section_subject',$data);
     }
