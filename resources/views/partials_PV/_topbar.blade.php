@@ -19,6 +19,7 @@
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="#"><i class="fa fa-behance"></i></a></li>
                     <li><a href="#"><i class="fa fa-dribbble"></i></a></li> --}}
+                    <li><a href="{{ url('features') }}">Feature</a></li>
                     <li><a href="{{ route('login') }}">Login</a></li>
                 </ul>
                 <!-- End Social -->

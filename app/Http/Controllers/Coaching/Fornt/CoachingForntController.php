@@ -123,4 +123,15 @@ class CoachingForntController extends Controller
         return view('single_event',$data);
     }
 
+    public function feature()
+    {
+        $data = [];
+
+        $data['header_inner'] = false;
+        $data['header_menu'] = false;
+        $data['slide'] = false;
+        $data['footer'] = false;
+        return view('feature',$data);
+    }
+
 }

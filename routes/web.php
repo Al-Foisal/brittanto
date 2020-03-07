@@ -9,6 +9,7 @@ Route::get('/institution-details/{serial}', 'Coaching\Fornt\CoachingForntControl
 Route::post('/institution-details/student-information/store', 'Coaching\Fornt\CoachingForntController@storeOnlineStudent')->name('institution.online_student.store');
 Route::get('/institution-details/single-course/{id}','Coaching\Fornt\CoachingForntController@showSingleCourse')->name('institution.single_course');
 Route::get('/institution-details/single-event/{id}','Coaching\Fornt\CoachingForntController@showSingleEvent')->name('institution.single_event');
+Route::get('features','Coaching\Fornt\CoachingForntController@feature');
 
 //authenticated user willnot enter
 Route::group(['middleware' => 'guest'], function(){
