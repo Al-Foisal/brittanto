@@ -31,7 +31,7 @@ class CoachingForntController extends Controller
         $data['slide'] = false;
         $data['footer'] = false;
 
-        $data['users'] = User::orderBy('name')->where('active',0)->get()->groupBy(function($item) {
+        $data['users'] = User::orderBy('name')->where('active',1)->get()->groupBy(function($item) {
             return $item->type;
         });
         return view('welcome',$data);

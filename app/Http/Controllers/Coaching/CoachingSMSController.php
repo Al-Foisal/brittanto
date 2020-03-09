@@ -28,7 +28,7 @@ class CoachingSMSController extends Controller
 
         //checking sms limitation
         if($sms_count){
-            $limit = ( auth()->user()->FI / 100 ) * 400;
+            $limit = ( auth()->user()->service / 100 ) * 400;
             if($sms_count->count_sent_sms >= $limit)
                 $data['disabled'] = 'disabled';
         }
@@ -47,7 +47,7 @@ class CoachingSMSController extends Controller
 
         //checking sms limitation
         if($sms_count){
-            $limit = ( auth()->user()->FI / 100 ) * 400;
+            $limit = ( auth()->user()->service / 100 ) * 400;
             if($sms_count->count_sent_sms >= $limit){
                 session()->flash('message','SMS limitation overhead');
                 return back();
@@ -110,7 +110,7 @@ class CoachingSMSController extends Controller
             $url = "http://66.45.237.70/api.php";
             $number=$student->grd_phone.','.$student->std_phone;
             $text = $text1 .' '. $text2.''.auth()->user()->abbreviation;
-
+            
             $data= array(
                 'username'=>"01798032828",
                 'password'=>"K92MDB3A",
@@ -153,7 +153,7 @@ class CoachingSMSController extends Controller
             $sms_count->update(['count_sent_sms'=>$sms_count->count_sent_sms+$a]);
         }
 
-        session()->flash('message',$a.' success '.$b.' fail');
+        session()->flash('message','SMS sent successfully');
         return redirect()->route('coaching-students.index');
 
     }
