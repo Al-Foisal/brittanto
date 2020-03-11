@@ -33,15 +33,6 @@
             </a>
         </li>
 
-
-        {{-- for batch  menu --}}
-        <li class="nav-item {{-- {{ request()->is('/coaching-sections/*') ? 'active' : '' }} --}}" >
-            <a class="nav-link" href="{{ route('coaching-sections.index') }}">
-                <i class="material-icons md-18">event_note</i>
-                <span class="menu-title">Batch</span>
-            </a>
-        </li>
-
         {{-- for batch  exam --}}
         <li class="nav-item {{-- {{ request()->is('/coaching-sections/*') ? 'active' : '' }} --}}" >
             <a class="nav-link" href="{{ route('coaching-exam-titles.index') }}">
@@ -117,6 +108,22 @@
             <a class="nav-link" href="{{ route('docs') }}" target="_blank">
                 <i class="ti-write menu-icon"></i>
                 <span class="menu-title">Documentation</span>
+            </a>
+        </li>
+        <hr>
+
+        {{-- for batch  menu --}}
+        <li class="nav-item {{-- {{ request()->is('/coaching-sections/*') ? 'active' : '' }} --}}" >
+            <a class="nav-link" href="{{ route('coaching-sections.index') }}">
+                <i class="material-icons md-18">event_note</i>
+                <span class="menu-title">Batch</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('subject-lists.create') }}">
+                <i class="ti-write menu-icon"></i>
+                <span class="menu-title">Add Subjects</span>
             </a>
         </li>
     </ul>

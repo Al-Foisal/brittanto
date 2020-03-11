@@ -44,6 +44,7 @@ Route::group(['middleware' => 'auth'], function(){
 			Route::resource('/coaching-sections','Coaching\SectionOperationController');
 			Route::resource('/coaching-proceeds','Coaching\ProceedOperationController');
 			Route::resource('/coaching-exam-titles','Coaching\ExaminationTitleController');
+			Route::resource('subject-lists','Coaching\SubjectListController');
 
 			//SMS section
 			Route::post('/coaching-sms','Coaching\CoachingSMSController@showExamSMSArea')->name('sms.exam.show');

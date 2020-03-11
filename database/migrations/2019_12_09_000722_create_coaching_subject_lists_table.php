@@ -16,7 +16,14 @@ class CreateCoachingSubjectListsTable extends Migration
         Schema::create('coaching_subject_lists', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('subject_name',128);
-            $table->string('subject_code',32);
+            //making foreign key
+            
+            $table->unsignedBigInteger('inst_identity')->nullable();
+            $table->foreign('inst_identity')
+                  ->references('FI')
+                  ->on('users')
+                  ->onDelete('cascade');
+            //making foregn end
             $table->timestamps();
         });
     }
