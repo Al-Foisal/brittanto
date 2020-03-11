@@ -19,7 +19,7 @@ class CreateCoachingMarksTable extends Migration
             $table->unsignedBigInteger('student_id');
             $table->string('section',128);
             $table->string('exam_title',32);
-            $table->text('subject');
+            $table->string('subject',32);
             $table->unsignedInteger('mark');
             $table->unsignedInteger('class');
             $table->unsignedInteger('defined_mark');

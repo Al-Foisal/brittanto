@@ -148,7 +148,7 @@ class ExamNumberCalculation extends Controller
             'class' => 'required|digits_between:1,2',
             'section' => 'required',
             'subject' => 'required',
-            'Mark' => 'required',
+            'Mark' => 'required|max:3',
             'exam_title' => 'required',
             
         ]);

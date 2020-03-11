@@ -99,7 +99,7 @@
 											<option value="" selected>--select option--</option>
 
 											@foreach($lists as $list)
-											<option value="{{ $list->subject_code }}">{{ $list->subject_name }}</option>
+											<option value="{{ $list->subject_name }}">{{ $list->subject_name }}</option>
 											@endforeach
 										</select>
 									</td>  
@@ -155,7 +155,7 @@
                                 <td>{{ $exam->section }}</td>
                                 <td>{{ $exam->subject }}</td>
                                 <td>{{ $exam->mark }}</td>
-                                <td>{{ date('m/d/Y || h:i:s a', strtotime($exam->created_at)) }}</td>
+                                <td>{{ date('m/d/Y', strtotime($exam->created_at)) }}</td>
                                 <td>
                                     <div class="btn-group" role="group">
                                         <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

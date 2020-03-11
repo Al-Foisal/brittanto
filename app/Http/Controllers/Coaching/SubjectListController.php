@@ -40,7 +40,7 @@ class SubjectListController extends Controller
     public function store(Request $request)
     {
         $valid = Validator::make($request->all(),[
-            'subject_name' => 'required',
+            'subject_name' => 'required|max:32',
         ]);
 
         if ($valid->fails()) {
