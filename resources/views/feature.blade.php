@@ -31,9 +31,11 @@
 		<li>Auto generator of student <b>attendance sheet</b> according to batches</li>
 		<li>Facility to admit a student in any batches as <b>special</b> or <b>regular</b> student </li>
 		<li>A <b>dashboard</b> that will show institution summary</li>
+		<li><b>SMS Format:</b></li>
+		Md Hafiz Al Foisal,ID#209120001,Test-01: BANGLA 1ST PART got marks 100 out of 100,(1st-100), BANGLA 2ND PART got marks 100 out of 100,(1st-100), ENGLISH 1ST PART got marks 100 out of 100,(1st-100), ENGLISH 2ND PART got marks 100 out of 100,(1st-100),Demo Coaching Name One
 	</ol>
 <hr>
-Our software will provide you web base service. Link: https://brittanto.com/
+Our software will provide you web base service. Link: <a href="https://brittanto.com/">brittanto.com</a>
 All the data and privacy is safe specially your income related data also other data and no one can enter your profile and we always provide you a better service that will make your work so easy and peaceful. 
 <hr>
 <h4>Contract: <br>

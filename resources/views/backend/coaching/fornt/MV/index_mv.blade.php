@@ -1,6 +1,6 @@
 @extends('layouts.backend')
 
-@section('title') {{auth()->user()->FI }} Mission and Vision @stop
+@section('title') {{auth()->user()->abbreviation }} Mission and Vision @stop
 
 @section('css')
 
