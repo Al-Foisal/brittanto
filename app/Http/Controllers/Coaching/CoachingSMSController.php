@@ -101,7 +101,7 @@ class CoachingSMSController extends Controller
                     'inst_identity' => $fixed_identity
                 ])->whereYear('created_at',date("Y"))->max('mark');
 
-                $text2 = $text2.' '.$exam_number['subject'].' = '.$exam_number['mark'].'('.$exam_number['defined_mark'].')(1st-'.$highest_mark.'),';
+                $text2 = $text2.' '.$exam_number['subject'].' got marks '.$exam_number['mark'].' out of '.$exam_number['defined_mark'].',(1st-'.$highest_mark.'),';
                 
             }
             
@@ -109,7 +109,7 @@ class CoachingSMSController extends Controller
 /** sms sending API code are starts from here */
             $url = "http://66.45.237.70/api.php";
             $number=$student->grd_phone.','.$student->std_phone;
-            $text = $text1 .' '. $text2.''.auth()->user()->abbreviation;
+            $text = $text1 .' '. $text2.''.auth()->user()->name;
             
             $data= array(
                 'username'=>"01798032828",
