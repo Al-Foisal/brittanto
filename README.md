@@ -3,7 +3,7 @@
 [Brittanto.com](https://brittanto.com/) is a dynamic educational institution management system that will perform all of your task, like – **student admission, employee and owner profile creation**. Most important deeds, student admission according to batch, all the task related to examination like – **create new exam, making all the subject under a single examination, input all the student number under the exam subject and send message to the guardian and student about their examination subject number**. All the task related about **income statement** and will show you as a script.
 
 
-#Our salient features of brittanto.com:
+# Our salient features of brittanto.com:
 
 1. Student admission with their **tuition fee** (best for business)
 2. Auto generate **token** after student admission
@@ -35,6 +35,7 @@
 
 Our software will provide you web base service. Link: [Brittanto.com](https://brittanto.com/) All the data and privacy is safe specially your income related data also other data and no one can enter your profile and we always provide you a better service that will make your work so easy and peaceful.
 
+[Take a ture of my project! ](https://brittanto.com/login) **email**: ahf@gmail.com  **password**: 123
 
-#Contract:
-#Md. Hafiz Al Foisal, Phone: 01798032828
+# Contract:
+# Md. Hafiz Al Foisal, Phone: 01798032828
