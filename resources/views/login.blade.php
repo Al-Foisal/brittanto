@@ -4,7 +4,7 @@
 
 @section('foisal')
 
-<section>				
+<section>               
     <div id="container_demo" >
 
 
@@ -49,9 +49,9 @@
                         <input type="submit" value="Login" /> 
                     </p>
                     <p class="change_link">
-                        {{-- <a style="float: left;" class="btn btn-link" href="{{ route('password.request') }}">
+                        <a style="float: left;" class="btn btn-link" href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
-                        </a> --}}
+                        </a>
 
                         Not a member yet ?
                         <a href="{{ route('register') }}" class="to_register">Join us</a>

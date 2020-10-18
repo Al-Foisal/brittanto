@@ -13,12 +13,12 @@ class AuthController extends Controller
 {
     public function showRegisterForm()
     {
-    	return view('register');
+        return view('register');
     }
 
     public function register(Request $request)
     {
-    	$valid = Validator::make($request->all(),[
+        $valid = Validator::make($request->all(),[
             'name' => 'required',
             'abbreviation' => 'required',
             'area' => 'required',
@@ -60,7 +60,6 @@ class AuthController extends Controller
         }
 
         $input['FI'] = $sing . $last_identity;
-        $input['email_verified_at'] = now();
         
         $input['identity'] = str_pad($last_identity,3,0,STR_PAD_LEFT);
       
@@ -101,12 +100,12 @@ class AuthController extends Controller
 
     public function showLogin()
     {
-    	return view('login');
+        return view('login');
     }
 
     public function login(Request $request)
     {
-    	$validator = Validator::make($request->all(),[
+        $validator = Validator::make($request->all(),[
             'email' => 'required|email',
             'password' => 'required|min:2'
         ]);
